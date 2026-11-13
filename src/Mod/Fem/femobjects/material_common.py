@@ -138,6 +138,16 @@ class MaterialCommon(base_fempythonobject.BaseFemPythonObject):
         )
         prop.append(
             _PropHelper(
+                type="App::PropertyStringList",
+                name="ElectricalConductivityTable",
+                group="Temperature Tables",
+                doc="Electrical conductivity against temperature,\n"
+                + "each row 'temperature, electrical conductivity'",
+                value=[],
+            )
+        )
+        prop.append(
+            _PropHelper(
                 type="App::PropertyString",
                 name="MaterialName",
                 group="Material",
